@@ -1,0 +1,14 @@
+footer{
+    font-size: 12px
+}
+footer p{
+    margin: 0; margin-top: 10px
+}
+@media(max-width: 500px){
+    footer{
+        font-size: 8px
+    }
+    footer p{
+        margin: 0; margin-top: 8px
+    } 
+}
