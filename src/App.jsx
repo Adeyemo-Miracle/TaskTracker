@@ -84,17 +84,17 @@ const setReminder = async(id)=>{
   // console.log(resjson)
 }
   return (
-    <Router>
+    <Router basename={'/TaskTracker'}>
       <div className="App">
         <div className="tasktracker">
           <Header toggleForm={()=> setToggleForm(!toggleForm)} toggle={toggleForm} />
           <Routes >
-          <Route path='/TaskTracker' exact element={(
+          <Route path={`${process.env.PUBLIC_URL}/`} exact element={(
             <>{<div className={toggleForm ? `anIn`:`anOut`} ><AddTask onAdd={saveTask } /></div>}
             <div className='tasks' >{tasks.length > 0 ? <Tasks tasks={tasks} onClickId={onClickId} onDelete={deleteTask} setReminder={setReminder}/> : <><center><p style={{fontSize: '15px'}}>No Tasks</p></center></>}</div>
             <center><Footer /></center></>
           ) }/>
-          <Route path='/TaskTracker/about' element={<About />} />
+          <Route path={`${process.env.PUBLIC_URL}/about`} element={<About />} />
           </Routes>
         </div>
       </div>
