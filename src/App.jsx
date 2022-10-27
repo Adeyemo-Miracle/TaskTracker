@@ -89,12 +89,12 @@ const setReminder = async(id)=>{
         <div className="tasktracker">
           <Header toggleForm={()=> setToggleForm(!toggleForm)} toggle={toggleForm} />
           <Routes >
-          <Route path={`${process.env.PUBLIC_URL}/`} exact element={(
+          <Route path={`/`} exact element={(
             <>{<div className={toggleForm ? `anIn`:`anOut`} ><AddTask onAdd={saveTask } /></div>}
             <div className='tasks' >{tasks.length > 0 ? <Tasks tasks={tasks} onClickId={onClickId} onDelete={deleteTask} setReminder={setReminder}/> : <><center><p style={{fontSize: '15px'}}>No Tasks</p></center></>}</div>
             <center><Footer /></center></>
           ) }/>
-          <Route path={`${process.env.PUBLIC_URL}/about`} element={<About />} />
+          <Route path={`/about`} element={<About />} />
           </Routes>
         </div>
       </div>
