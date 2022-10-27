@@ -1,13 +1,13 @@
 {
-  "homepage":"http://Adeyemo-Miracle.github.io/TaskTracker",
+  "homepage": "http://Adeyemo-Miracle.github.io/TaskTracker",
   "name": "personal",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview",
     "server": "json-server --watch db.json --port 5000"
