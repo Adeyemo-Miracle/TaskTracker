@@ -84,7 +84,7 @@ const setReminder = async(id)=>{
   // console.log(resjson)
 }
   return (
-    <Router basename={'/TaskTracker'}>
+    <Router >
       <div className="App">
         <div className="tasktracker">
           <Header toggleForm={()=> setToggleForm(!toggleForm)} toggle={toggleForm} />
