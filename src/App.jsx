@@ -44,7 +44,7 @@ function saveTask (x){
     const resjson = await res.json()
     console.log(resjson)
     setOnClickId([])
-    setTask([...tasks, resjson])
+    setTask([ resjson, ...tasks])
   }
   AddTaskToServer()
   // const id = Math.floor(Math.random() * 10000)
